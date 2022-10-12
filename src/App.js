@@ -1,4 +1,4 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 
 import AllMeetupsPage from "./pages/AllMeetups";
 import NewMeetupPage from "./pages/NewMeetup";
@@ -9,7 +9,7 @@ import {FavoriteMeetupsContextProvider} from "./store/FavoriteMeetupsContext";
 export default function App() {
     return (
         <FavoriteMeetupsContextProvider>
-            <BrowserRouter>
+            <HashRouter>
                 <Layout>
                     <Routes>
                         <Route path='/' element={<AllMeetupsPage/>}/>
@@ -17,7 +17,7 @@ export default function App() {
                         <Route path='/favorites' element={<FavoritesPage/>}/>
                     </Routes>
                 </Layout>
-            </BrowserRouter>
+            </HashRouter>
         </FavoriteMeetupsContextProvider>
     );
 }
