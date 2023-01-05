@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 import classes from "./MainNavigation.module.css";
 import {useContext} from "react";
@@ -13,16 +13,16 @@ export default function MainNavigation(props) {
             <nav>
                 <ul>
                     <li>
-                        <Link to='/'>All Meetups</Link>
+                        <NavLink to='/'>All Meetups</NavLink>
                     </li>
                     <li>
-                        <Link to='/new-meetup'>Add New</Link>
+                        <NavLink to='/new-meetup'>Add New</NavLink>
                     </li>
                     <li>
-                        <Link to='/favorites'>
+                        <NavLink to='/favorites'>
                             My Favorites
                             <span className={classes.badge}>{favoritesContext.totalFavorites}</span>
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>

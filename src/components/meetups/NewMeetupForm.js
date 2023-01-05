@@ -31,6 +31,7 @@ export default function NewMeetupForm() {
             description: event.target.description.value,
         };
 
+        // TODO: call this after validating the form data
         validSubmissionHandler(meetupData);
     }
 
